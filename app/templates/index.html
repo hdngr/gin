@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<link rel="stylesheet" href={{url_for('static', filename='css/main.css')}}/>
+<script src={{url_for('static', filename='js/main.js')}}/></script>
+{% endblock head %}
+
+
+{% block body %}
+
+{% if name %}
+<h1>{{ name ~ "'s" }} awesome new flask app!</h1>
+
+{% else %}
+<h1> My awesome new Flask app!! </h1>
+<h3> What's your name? 
+<input type="text" id="text">
+<input onclick="reload()" type="submit" id="submit" value="Submit">
+</h3>
+{% endif %}
+
+{% endblock body %}
